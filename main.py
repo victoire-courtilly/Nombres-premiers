@@ -6,8 +6,17 @@ from math import sqrt
 def isprime(p):
 
     # votre code ici
+    if p <= 1 :
+        return False
+    elif p == 2 :
+        return True
+    elif p % 2 == 0 :
+        return False
 
-    pass
+    for i in range(3, int(sqrt(p))+1, 2) :
+        if p%i == 0 :
+            return False
+    return True
 
 #### Fonction principale
 
